@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\小婵婵\Desktop\发布</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/MEEC_Config_System.dll">
+      <publishTime>04/07/2021 15:55:29</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>09/18/2019 06:03:00</publishTime>
+    </File>
+    <File Include="Controler_Function.js">
+      <publishTime>04/04/2021 22:51:08</publishTime>
+    </File>
+    <File Include="DataGrid.js">
+      <publishTime>04/04/2021 22:18:52</publishTime>
+    </File>
+    <File Include="js/jquery-3.5.1.js">
+      <publishTime>06/23/2020 14:11:13</publishTime>
+    </File>
+    <File Include="json.js">
+      <publishTime>04/03/2021 14:24:24</publishTime>
+    </File>
+    <File Include="MainView.aspx">
+      <publishTime>04/07/2021 15:05:37</publishTime>
+    </File>
+    <File Include="parameter_type.aspx">
+      <publishTime>04/06/2021 15:53:16</publishTime>
+    </File>
+    <File Include="Position.aspx">
+      <publishTime>04/05/2021 18:57:48</publishTime>
+    </File>
+    <File Include="ProjectConfig.aspx">
+      <publishTime>04/05/2021 19:59:20</publishTime>
+    </File>
+    <File Include="SqlCaozuo.asmx">
+      <publishTime>04/01/2021 15:33:08</publishTime>
+    </File>
+    <File Include="sql_JS.js">
+      <publishTime>04/04/2021 22:38:54</publishTime>
+    </File>
+    <File Include="String_Caozuo.js">
+      <publishTime>04/05/2021 15:03:42</publishTime>
+    </File>
+    <File Include="UserConfig.aspx">
+      <publishTime>04/05/2021 14:30:12</publishTime>
+    </File>
+    <File Include="viewfunction.js">
+      <publishTime>04/03/2021 10:33:28</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/07/2021 15:55:29</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
