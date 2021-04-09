@@ -26,7 +26,7 @@ namespace MEEC_Config_System
       
     public class SqlCaozuo : System.Web.Services.WebService
     {
-        public static string remote_ip = "192.168.43.137";
+        public static string remote_ip = "58.250.100.13";
         public static string database_name = "saigedatabase";
         public static string password = "ncl5722354";
         public static string user="root";
