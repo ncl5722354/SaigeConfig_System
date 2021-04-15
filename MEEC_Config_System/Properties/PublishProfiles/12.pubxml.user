@@ -6,56 +6,62 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\小婵婵\Desktop\发布</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\DAIER\Desktop\发布设置软件</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/MEEC_Config_System.dll">
-      <publishTime>04/07/2021 15:55:29</publishTime>
+      <publishTime>04/15/2021 09:09:35</publishTime>
     </File>
     <File Include="bin/MySql.Data.dll">
-      <publishTime>09/18/2019 06:03:00</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="Controler_Function.js">
-      <publishTime>04/04/2021 22:51:08</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="DataGrid.js">
-      <publishTime>04/04/2021 22:18:52</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
+    </File>
+    <File Include="DeviceType.aspx">
+      <publishTime>04/09/2021 16:05:52</publishTime>
+    </File>
+    <File Include="Device_Config.aspx">
+      <publishTime>04/09/2021 16:25:45</publishTime>
     </File>
     <File Include="js/jquery-3.5.1.js">
-      <publishTime>06/23/2020 14:11:13</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="json.js">
-      <publishTime>04/03/2021 14:24:24</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="MainView.aspx">
-      <publishTime>04/07/2021 15:05:37</publishTime>
+      <publishTime>04/09/2021 17:47:12</publishTime>
     </File>
     <File Include="parameter_type.aspx">
-      <publishTime>04/06/2021 15:53:16</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="Position.aspx">
-      <publishTime>04/05/2021 18:57:48</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="ProjectConfig.aspx">
-      <publishTime>04/05/2021 19:59:20</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="SqlCaozuo.asmx">
-      <publishTime>04/01/2021 15:33:08</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="sql_JS.js">
-      <publishTime>04/04/2021 22:38:54</publishTime>
+      <publishTime>04/09/2021 15:21:10</publishTime>
     </File>
     <File Include="String_Caozuo.js">
-      <publishTime>04/05/2021 15:03:42</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="UserConfig.aspx">
-      <publishTime>04/05/2021 14:30:12</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="viewfunction.js">
-      <publishTime>04/03/2021 10:33:28</publishTime>
+      <publishTime>04/09/2021 10:52:14</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/07/2021 15:55:29</publishTime>
+      <publishTime>04/15/2021 09:09:35</publishTime>
     </File>
   </ItemGroup>
 </Project>

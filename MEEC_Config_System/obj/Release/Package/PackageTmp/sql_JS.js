@@ -24,3 +24,35 @@ function ex_sql(sql)
         }
     });
 }
+
+
+
+// 插入的简单用法
+function insert_sql(insert_array,table_name)
+{
+    var sql = "insert into " + table_name + " values (";
+
+    for (var i = 0; i < insert_array.length - 1;i++)
+    {
+        sql = sql + insert_array[i].toString()+",";
+    }
+
+    sql = sql + insert_array[insert_array.length - 1].toString() + ")";
+
+    ex_sql(sql);
+
+
+}
+
+function update_sql(update_array, table_name, where_cmd) {
+    var sql = "update " + table_name + " set ";
+
+    for (var i = 0; i < update_array.length - 1; i++) {
+        sql = sql + update_array[i].toString() + ",";
+
+    }
+
+    sql = sql + update_array[update_array.length - 1].toString() + " " + where_cmd;
+    
+    ex_sql(sql);
+}

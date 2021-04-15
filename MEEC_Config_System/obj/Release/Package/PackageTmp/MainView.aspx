@@ -24,6 +24,10 @@
             <div id="Label_Device" style="position:absolute;left:0%;width:100%;top:125px;height:25px;text-align:center;color:white;background-color:green;font-size:20px">设备相关</div>
 
             <div id="Label_Parameter_Type_Config" style="position:absolute;left:15%;width:85%;top:150px;height:25px;text-align:center;font-size:18px;color:white;background-color:blue">参数种类设置</div>
+
+            <div id="Label_Device_Type_Config" style="position:absolute;left:15%;width:85%;top:175px;height:25px;text-align:center;font-size:18px;color:white;background-color:blue">设备种类设置</div>
+
+            <div id="Label_Device_Config" style="position:absolute;left:15%;width:85%;top:200px;height:25px;text-align:center;font-size:18px;color:white;background-color:blue">设备设置</div>
         </div>
         <div id="Label_Menu" style="position:absolute;left:1%;width:10%;top:40px;height:20px;font-size:19px;text-align:center">主菜单</div>
 
@@ -137,5 +141,18 @@
         Put_Page_In_iFrame("parameter_type.aspx", "subview");
     }
 
+
+    var label_Device_Type_Config = document.getElementById("Label_Device_Type_Config");
+    label_Device_Type_Config.onclick=function(event)
+    {
+        Put_Page_In_iFrame("DeviceType.aspx", "subview");
+    }
+
+    var label_Device_Config = document.getElementById("Label_Device_Config");
+
+    label_Device_Config.onclick=function(event)
+    {
+        Put_Page_In_iFrame("Device_Config.aspx", "subview");
+    }
 
 </script>
