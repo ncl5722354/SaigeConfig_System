@@ -106,7 +106,8 @@
         ex_sql("create table `Project_Online` (ProjectID varchar(50),onlinetime varchar(50),primary key(`ProjectID`))");
 
 
-        
+        // 创建历史表格
+        ex_sql("create table `history_save`(device_id varchar(50),value_id varchar(50),value varchar(50),savetime varchar(50))");
     }
 
     init();
