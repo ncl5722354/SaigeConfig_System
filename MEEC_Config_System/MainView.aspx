@@ -108,6 +108,9 @@
 
         // 创建历史表格
         ex_sql("create table `history_save`(device_id varchar(50),value_id varchar(50),value varchar(50),savetime varchar(50))");
+
+        // 创立各个电力设备能源当天的消耗数
+        ex_sql("create table `Elect_Device_Energy_Cost`(device_id_and_Date varchar(50),device_id varchar(50),datetime varchar(50),cost varchar(50),primary key(`device_id_and_Date`)) ");
     }
 
     init();
