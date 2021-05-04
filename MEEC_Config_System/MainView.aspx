@@ -32,7 +32,7 @@
         <div id="Label_Menu" style="position:absolute;left:1%;width:10%;top:40px;height:20px;font-size:19px;text-align:center">主菜单</div>
 
         <!--子界面-->
-        <iframe id="subview" style="position:absolute;left:12%;width:87%;top:50px;bottom:40px; height: inherit;"  ></iframe>
+        <iframe id="subview" style="position:absolute;left:12%;width:87%;top:50px;bottom:40px; height: inherit;"></iframe>
     </div>
     </form>
 </body>
@@ -99,8 +99,18 @@
         //           步骤：当时进行到哪一步
 
 
-        ex_sql( "create table Warninginfo  (DanjuID varchar(50),shiwuID varchar(50),shebeiID varchar(50),warning_info varchar(50),info_time varchar(50),warning_time varchar(50),jiejue varchar(50),step varchar(50),user varchar(50),primary key (`DanjuID`))");
+        ex_sql( "create table `Warninginfo`  (DanjuID varchar(50),shiwuID varchar(50),shebeiID varchar(50),warning_info varchar(50),info_time varchar(50),warning_time varchar(50),jiejue varchar(50),step varchar(50),user varchar(50),primary key (`DanjuID`))");
         
+
+        // 创建项目在线的表
+        ex_sql("create table `Project_Online` (ProjectID varchar(50),onlinetime varchar(50),primary key(`ProjectID`))");
+
+
+        // 创建历史表格
+        ex_sql("create table `history_save`(device_id varchar(50),value_id varchar(50),value varchar(50),savetime varchar(50))");
+
+        // 创立各个电力设备能源当天的消耗数
+        ex_sql("create table `Elect_Device_Energy_Cost`(device_id_and_Date varchar(50),device_id varchar(50),datetime varchar(50),cost varchar(50),primary key(`device_id_and_Date`)) ");
     }
 
     init();
