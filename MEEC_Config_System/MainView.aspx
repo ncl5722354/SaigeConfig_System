@@ -28,6 +28,8 @@
             <div id="Label_Device_Type_Config" style="position:absolute;left:15%;width:85%;top:175px;height:25px;text-align:center;font-size:18px;color:white;background-color:blue">设备种类设置</div>
 
             <div id="Label_Device_Config" style="position:absolute;left:15%;width:85%;top:200px;height:25px;text-align:center;font-size:18px;color:white;background-color:blue">设备设置</div>
+        
+            <div id="Label_Warning_Set" style="position:absolute;left:15%;width:85%;top:225px;height:25px;text-align:center;font-size:18px;color:white;background-color:blue">报警设置</div>
         </div>
         <div id="Label_Menu" style="position:absolute;left:1%;width:10%;top:40px;height:20px;font-size:19px;text-align:center">主菜单</div>
 
@@ -111,6 +113,14 @@
 
         // 创立各个电力设备能源当天的消耗数
         ex_sql("create table `Elect_Device_Energy_Cost`(device_id_and_Date varchar(50),device_id varchar(50),datetime varchar(50),cost varchar(50),primary key(`device_id_and_Date`)) ");
+
+
+        // 创立设置报警表
+        ex_sql("create table `Warning_Value_Set_Table`(warning_item_id varchar(50),device_id varchar(50),value_index varchar(50),bit_index varchar(50),warn_condition varchar(50),value varchar(50))");
+
+
+       
+
     }
 
     init();
@@ -165,4 +175,12 @@
         Put_Page_In_iFrame("Device_Config.aspx", "subview");
     }
 
+
+    // 报警设置
+    var label_Warning_Config = document.getElementById("Label_Warning_Set");
+
+    label_Warning_Config.onclick = function (event)
+    {
+        Put_Page_In_iFrame("WarningConfig.aspx", "subview");
+    }
 </script>

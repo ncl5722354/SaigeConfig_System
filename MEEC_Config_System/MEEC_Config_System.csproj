@@ -86,6 +86,7 @@
     <Content Include="String_Caozuo.js" />
     <Content Include="UserConfig.aspx" />
     <Content Include="viewfunction.js" />
+    <Content Include="WarningConfig.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -144,6 +145,13 @@
     </Compile>
     <Compile Include="UserConfig.aspx.designer.cs">
       <DependentUpon>UserConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WarningConfig.aspx.cs">
+      <DependentUpon>WarningConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WarningConfig.aspx.designer.cs">
+      <DependentUpon>WarningConfig.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

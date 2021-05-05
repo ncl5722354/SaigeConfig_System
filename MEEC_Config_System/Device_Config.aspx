@@ -69,7 +69,7 @@
     controls_array.push("Input_Project");
     controls_array.push("Input_Project_Address");
 
-    Read_Sql_To_Select("select  shebeizhongleiname from shebeizhongleitable", "Input_Device_Type");
+    Read_Sql_To_Select("select shebeizhongleiname from shebeizhongleitable", "Input_Device_Type");
 
     Read_Sql_To_Select("select xiangmuname from xiangmuguanlitable", "Input_Project");
 

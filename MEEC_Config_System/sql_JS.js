@@ -25,6 +25,29 @@ function ex_sql(sql)
     });
 }
 
+function get_result_sql(sql) {
+    var reslut;
+    $.ajax({
+        url: "SqlCaozuo.asmx/Get_Sql_Select_Return",
+        type: "Post",
+        async: false,
+        dataType: "text",
+        contentType: "application/json; charset=utf-8",
+        data: "{sql:'" + sql + "'}",
+        success: function (data) {
+            result = data.toString();
+        },
+        error: function (data) {
+            //200的响应也有可能被认定为error，responseText中没有Message部分
+            return $.parseJSON(data.responseText).Message;
+        },
+        complete: function (data) {
+
+        }
+    });
+    return result;
+}
+
 
 
 // 插入的简单用法
