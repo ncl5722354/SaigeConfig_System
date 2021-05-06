@@ -114,7 +114,7 @@
 
         Read_Array_To_Select(condition_array, "select_warning_condition");
 
-
+        Reflush_DataGrid();
         
     }
 
@@ -128,6 +128,13 @@
 
     // 增加按钮
     var add_button = document.getElementById("add_warning_item");
+
+    // 更新按钮
+    var update_button = document.getElementById("update_warning_item");
+
+
+    // 删除按钮
+    var delete_button = document.getElementById("delete_warning_item");
 
     add_button.onclick = function (event) {
 
@@ -148,6 +155,73 @@
         var warn_value = document.getElementById("select_warning_value").value.toString();
 
         ex_sql("insert into warning_value_set_table values(\"" + warning_item_id + "\",\"" + device_id + "\",\"" + value_index + "\",\"" + bit_index + "\",\"" + warn_condition + "\",\"" + warn_value + "\")");
+
+
+        Reflush_DataGrid();
+    }
+
+
+    update_button.onclick = function (event) {
+        var warning_item_id = document.getElementById("warning_item_id").value.toString();
+
+        var device_id_string = get_result_sql("select shebeiID from shebeitable where shebeiname=\"" + document.getElementById("select_device").value.toString() + "\"");
+        var device_id_json = From_Text_To_Json(device_id_string);
+        var device_id = device_id_json[0].toString();
+
+        var value_index_string = get_result_sql("select canshutypeid from canshutable where canshutype=\"" + document.getElementById("select_value_index").value.toString() + "\"");
+        var value_index_json = From_Text_To_Json(value_index_string);
+        var value_index = value_index_json[0].toString();
+
+        var bit_index = document.getElementById("select_value_bit_index").value.toString();
+
+        var warn_condition = document.getElementById("select_warning_condition").value.toString();
+
+        var warn_value = document.getElementById("select_warning_value").value.toString();
+
+        ex_sql("update warning_value_set_table set device_id=\"" + device_id + "\",value_index=\"" + value_index + "\",bit_index=\"" + bit_index + "\",warn_condition=\"" + warn_condition + "\",value=\"" + warn_value + "\"");
+
+        Reflush_DataGrid();
+
+    }
+
+    delete_button.onclick=function(event)
+    {
+        var warning_item_id = document.getElementById("warning_item_id").value.toString();
+
+        ex_sql("delete from warning_value_set_table where warning_item_id=\"" + warning_item_id + "\"");
+
+        Reflush_DataGrid();
+    }
+
+
+    // 刷新表格
+    function Reflush_DataGrid()
+    {
+
+
+
+
+
+        var heaer_list=new Array();
+        heaer_list.push("报警项ID");
+        heaer_list.push("设备");
+        heaer_list.push("参数");
+        heaer_list.push("参数位");
+        heaer_list.push("报警条件");
+        heaer_list.push("报警值");
+
+        var usercontrols_list=new Array();
+        usercontrols_list.push("warning_item_id");
+        usercontrols_list.push("select_device");
+        usercontrols_list.push("select_value_index");
+        usercontrols_list.push("select_value_bit_index");
+        usercontrols_list.push("select_warning_condition");
+        usercontrols_list.push("select_warning_value");
+
+        Fill_DataGrid_From_Sql("warningconfig_datagrid", "warningconfig_subdatagrid", "warningconfig_header", "select  warning_item_id,(select shebeiname from shebeitable where `shebeitable`.shebeiID=`warning_value_set_table`.device_id),(select canshutype from canshutable where canshutypeid=value_index),bit_index,warn_condition,value from warning_value_set_table",heaer_list,usercontrols_list);
+
+
+
 
     }
 
