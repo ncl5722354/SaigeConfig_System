@@ -118,7 +118,7 @@
         // 创立设置报警表
         ex_sql("create table `Warning_Value_Set_Table`(warning_item_id varchar(50),device_id varchar(50),value_index varchar(50),bit_index varchar(50),warn_condition varchar(50),value varchar(50))");
 
-        ex_sql("create table `search_info_table`(`search_info_id` varchar(50) not null,`device` varchar(50),`info` varchar(100),`type` varchar(50),`user` varchar(100),`pic` varchar(50), `pic2` varchar(50),`pic3` varchar(50),`savetime` varchar(50),primary key(`search_info_id`) )");
+        ex_sql("create table `search_info_table`(`search_info_id` varchar(50) not null,`device` varchar(50),`info` varchar(100),`type` varchar(50),`user` varchar(100),`pic` varchar(50), `pic2` varchar(50),`pic3` varchar(50),`savetime` varchar(50),touser varchar(50),have_senn varchar(50), primary key(`search_info_id`) )");
        
 
     }
